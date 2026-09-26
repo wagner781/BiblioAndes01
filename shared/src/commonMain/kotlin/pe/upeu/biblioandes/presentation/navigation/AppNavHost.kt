@@ -1,11 +1,7 @@
 package pe.upeu.biblioandes.presentation.navigation
 
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.List
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material3.Icon
+
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
@@ -34,7 +30,7 @@ fun AppNavHost() {
             if (currentRoute in listOf(Destinos.Inicio, Destinos.Catalogo, Destinos.Prestamos, Destinos.Perfil)) {
                 NavigationBar {
                     NavigationBarItem(
-                        icon = { Icon(Icons.Default.Home, contentDescription = "Inicio") },
+                        icon = { Text("🏠") },
                         label = { Text("Inicio") },
                         selected = currentRoute == Destinos.Inicio,
                         onClick = {
@@ -45,7 +41,7 @@ fun AppNavHost() {
                         }
                     )
                     NavigationBarItem(
-                        icon = { Icon(Icons.Default.List, contentDescription = "Catálogo") },
+                        icon = { Text("📖") },
                         label = { Text("Catálogo") },
                         selected = currentRoute == Destinos.Catalogo,
                         onClick = {
@@ -56,7 +52,7 @@ fun AppNavHost() {
                         }
                     )
                     NavigationBarItem(
-                        icon = { Icon(Icons.Default.List, contentDescription = "Préstamos") },
+                        icon = { Text("📚") },
                         label = { Text("Préstamos") },
                         selected = currentRoute == Destinos.Prestamos,
                         onClick = {
@@ -67,7 +63,7 @@ fun AppNavHost() {
                         }
                     )
                     NavigationBarItem(
-                        icon = { Icon(Icons.Default.Person, contentDescription = "Perfil") },
+                        icon = { Text("👤") },
                         label = { Text("Perfil") },
                         selected = currentRoute == Destinos.Perfil,
                         onClick = {
